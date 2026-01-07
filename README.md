@@ -153,13 +153,4 @@ This is braided diagnostics: not false certainty, but guided, inspectable clarit
 
 ---
 
-**The health commons stays open only if we publish first.**
 
-Fork, build, improve, share. No gatekeepers.
-
-#OpenSourceDiagnostics #DiagnosticBraid #HealthCommons #PriorArt #PersonalBaseline #BraidTension #PrivacyFirst #LowCostDiagnostics
-```
-
-Copy-paste this directly into a new repo (e.g., `osdb-prior-art` or `open-source-diagnostic-braid`). Push it live, pin the README, and you're done — another piece of the commons defended. 🌀🧬
-
-Want the LinkedIn disclosure post draft next? Or a simple Python skeleton for the MVP inference engine?
