@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open-Source Diagnostic Braid — defensive publication, 7 January 2026</title>
+<meta name="description" content="Health as a braided network of signals, built against enclosure. Published 7 January 2026 as prior art. CC0 1.0 Universal — no rights reserved.">
+<style>
+ :root{--bg:#fbfaf7;--panel:#fff;--line:#e0dcd3;--ink:#23211d;--dim:#5f5a52;--faint:#8d867b;
+   --seal:#7a5c2e;--accent:#2f5d50;
+   --serif:Iowan Old Style,Palatino Linotype,Palatino,Georgia,serif;
+   --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+   --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+ @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14130f;--panel:#1b1a16;--line:#332f28;
+   --ink:#e8e3d8;--dim:#a49c8e;--faint:#7d7466;--seal:#c9a25f;--accent:#7bbfa7}}
+ :root[data-theme="dark"]{--bg:#14130f;--panel:#1b1a16;--line:#332f28;--ink:#e8e3d8;--dim:#a49c8e;
+   --faint:#7d7466;--seal:#c9a25f;--accent:#7bbfa7}
+ *{box-sizing:border-box}html,body{margin:0}
+ body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.66}
+ .wrap{max-width:44rem;margin:0 auto;padding:0 1.25rem 5rem}
+ a{color:var(--accent)}
+ header{padding:3rem 0 1.5rem;border-bottom:2px solid var(--line)}
+ .kicker{font-family:var(--sans);font-size:.7rem;letter-spacing:.19em;text-transform:uppercase;
+   color:var(--seal);font-weight:700;margin:0 0 .85rem}
+ h1{font-size:clamp(1.9rem,5.5vw,2.7rem);line-height:1.13;margin:0 0 .6rem;letter-spacing:-.015em;text-wrap:balance}
+ .sub{color:var(--dim);font-size:1.08rem;margin:0;text-wrap:balance}
+ .seal{margin:1.6rem 0 0;border:1px solid var(--line);border-left:3px solid var(--seal);
+   background:var(--panel);border-radius:0 7px 7px 0;padding:.85rem 1.1rem;font-family:var(--sans);font-size:.83rem;color:var(--dim)}
+ .seal b{color:var(--ink)}
+ .seal dl{display:grid;grid-template-columns:auto 1fr;gap:.3rem .9rem;margin:0}
+ .seal dt{color:var(--faint);text-transform:uppercase;letter-spacing:.1em;font-size:.66rem;padding-top:.18rem}
+ .seal dd{margin:0}
+ article{padding-top:.6rem}
+ article h1,article h2{font-size:1.42rem;margin:2.4rem 0 .7rem;line-height:1.25;letter-spacing:-.01em;
+   padding-bottom:.3rem;border-bottom:1px solid var(--line);text-wrap:balance}
+ article h3{font-size:1.13rem;margin:1.9rem 0 .5rem}
+ article h4,article h5,article h6{font-size:.98rem;margin:1.5rem 0 .4rem;font-family:var(--sans)}
+ article p{margin:.85rem 0}
+ article ul,article ol{margin:.85rem 0;padding-left:1.5rem}article li{margin:.3rem 0}
+ blockquote{margin:1.1rem 0;padding:.15rem 0 .15rem 1.1rem;border-left:3px solid var(--line);color:var(--dim);font-style:italic}
+ hr{border:0;border-top:1px solid var(--line);margin:2rem 0}
+ code{font-family:var(--mono);font-size:.86em;background:var(--panel);border:1px solid var(--line);
+   border-radius:4px;padding:.08em .34em}
+ .code{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:.9rem 1rem;
+   overflow-x:auto;font-size:.76rem;line-height:1.45}
+ .code code{background:none;border:0;padding:0;font-size:inherit;white-space:pre}
+ .note{font-family:var(--sans);font-size:.81rem;color:var(--faint);border:1px dashed var(--line);
+   border-radius:7px;padding:.7rem .95rem;margin:2rem 0 0}
+ footer{margin-top:3rem;padding-top:1.6rem;border-top:2px solid var(--line);font-family:var(--sans);font-size:.83rem;color:var(--dim)}
+ footer h2{font-size:.7rem;letter-spacing:.19em;text-transform:uppercase;color:var(--faint);margin:0 0 .8rem;border:0;padding:0}
+ .sibs{list-style:none;margin:0 0 1.6rem;padding:0;display:grid;gap:.45rem}
+ .sibs a{text-decoration:none;display:block;border:1px solid var(--line);background:var(--panel);
+   border-radius:7px;padding:.6rem .85rem}
+ .sibs a:hover{border-color:var(--seal)}
+ .sibs .t{color:var(--ink);font-weight:600}.sibs .m{color:var(--faint);font-size:.76rem;font-variant-numeric:tabular-nums}
+</style></head><body><div class="wrap">
+<header>
+ <p class="kicker">Defensive publication · prior art</p>
+ <h1>Open-Source Diagnostic Braid</h1>
+ <p class="sub">Health as a braided network of signals, built against enclosure</p>
+ <div class="seal"><dl>
+  <dt>Disclosed</dt><dd><b>7 January 2026</b> — first commit 2026-01-07 22:31:24 UTC</dd>
+  <dt>Rights</dt><dd>CC0 1.0 Universal — no rights reserved</dd>
+  <dt>Record</dt><dd><a href="https://github.com/sjgant80-hub/open-source-diagnostic-braid">github.com/sjgant80-hub/open-source-diagnostic-braid</a> — the commit history is the timestamp</dd>
+ </dl></div>
+</header>
+<article>
+<h1>Defensive Publication (Public Domain): Open-Source Diagnostic Braid (OSDB)</h1>
+<p><strong>Defensive Disclosure • January 2026 • Commons Health Innovation</strong></p>
+<blockquote>A modular, composable diagnostic framework that treats health as a braided network of signals — biological, behavioral, and environmental — enabling anyone to build low-cost, privacy-preserving diagnostics without vendor lock-in.</blockquote>
+<p><strong>Status</strong>: Speculative but fully implementable with today’s off-the-shelf sensors, assays, and open-source tools.</p>
+<p><strong>License Intent</strong>: Public Domain (CC0 1.0 Universal). No rights reserved. This disclosure is designed to establish prior art and prevent proprietary enclosure of braided diagnostic architectures.</p>
+<p>This repository publishes the complete conceptual blueprint, architecture, data model, and reference implementation guidance for the <strong>Open-Source Diagnostic Braid (OSDB)</strong>.</p>
+<h2>Core Idea: Build a Braid, Not a Single Test</h2>
+<p>Health states are <strong>latent</strong> — you cannot measure them directly.</p>
+<p>You can only measure many <strong>noisy, partial proxies</strong>.</p>
+<p>Truth emerges from <strong>braid tension</strong>: patterns of agreement and disagreement across multiple weak signals.</p>
+<h2>1. The Braid Principle</h2>
+<p>Each “strand” is an independent measurement channel:</p>
+<ol start="1">
+<li><strong>Molecular strand</strong> – e.g., CRP, ferritin, glucose, lactate, pathogen markers</li>
+<li><strong>Physiology strand</strong> – HR, HRV, SpO₂, temperature, BP, sleep stages</li>
+<li><strong>Symptom/phenotype strand</strong> – structured diary, cough audio, rash photos, pain scales</li>
+<li><strong>Exposure strand</strong> – air quality, allergens, diet log, medications, travel history</li>
+<li><strong>Microbiome/immune strand</strong> – optional slower-changing context</li>
+<li><strong>Baseline strand</strong> – your personal normal (the most powerful and underrated biomarker)</li>
+</ol>
+<p>The braid fuses these into:</p>
+<ul>
+<li>A probabilistic <strong>risk score</strong></li>
+<li>An <strong>uncertainty estimate</strong></li>
+<li>A <strong>next-best-measurement suggestion</strong></li>
+</ul>
+<h2>2. OSDB Architecture (Modular &amp; Buildable)</h2>
+<h3>A. Strand Adapters (Input Standardization)</h3>
+<p>Convert raw signals into a unified event format:</p>
+<pre class="code"><code>{
+  &quot;timestamp&quot;: &quot;2026-01-07T10:32:00Z&quot;,
+  &quot;strand_type&quot;: &quot;physiology&quot;,
+  &quot;feature_vector&quot;: {&quot;hr&quot;: 92, &quot;hrv&quot;: 28, &quot;spo2&quot;: 96},
+  &quot;quality_flags&quot;: {&quot;motion_artifact&quot;: false, &quot;good_contact&quot;: true},
+  &quot;provenance&quot;: &quot;fitbit_ble_export&quot;
+}</code></pre>
+<p>Supported adapters (example list):</p>
+<ul>
+<li>Phone-camera lateral flow assay readers</li>
+<li>Manual lab panel entry / CSV import</li>
+<li>Wearables (Apple Health, Google Fit, BLE)</li>
+<li>Structured questionnaires (FHIR-compatible)</li>
+<li>Environmental APIs / local sensors</li>
+</ul>
+<h3>B. Feature Weaving Layer</h3>
+<p>Primary features are <strong>deltas from personal baseline</strong>, not population norms.</p>
+<p>Examples:</p>
+<ul>
+<li>ΔCRP from user baseline</li>
+<li>3-day slope of resting HR</li>
+<li>Discordance score (e.g., high temp but normal CRP)</li>
+</ul>
+<h3>C. Braid Inference Engine (Probabilistic Fusion)</h3>
+<p>Recommended approach:</p>
+<ul>
+<li>Bayesian graphical model / factor graph over latent health states</li>
+<li>Each strand contributes likelihood factors</li>
+<li>Output: full posterior distribution + explainable evidence chains</li>
+</ul>
+<p>Example output:</p>
+<blockquote>“Moderate probability of viral syndrome (62%). Evidence (coherence): rising fever trend + mild tachycardia + cough acoustics. Evidence (contradiction): normal SpO₂, no chest pain. Uncertainty drivers: missing CRP, low-quality sleep HRV.”</blockquote>
+<h3>D. Active Measurement Planner</h3>
+<p>Information-theoretic selection of next measurement that maximally reduces uncertainty per cost/effort.</p>
+<p>Examples:</p>
+<ul>
+<li>“Repeat temperature in 4 hours”</li>
+<li>“Perform rapid strep test”</li>
+<li>“Spot-check SpO₂ after light activity”</li>
+</ul>
+<h3>E. Safety &amp; Governance Layer (Hard Guardrails)</h3>
+<p>Non-negotiable rules:</p>
+<ul>
+<li>Immediate escalation for red flags (SpO₂ &lt; 92%, severe chest pain, stroke signs)</li>
+<li>Clear disclaimers: decision support only, never autonomous diagnosis</li>
+<li>“Do not delay professional care” triggers</li>
+</ul>
+<h2>3. Braid Tension Metrics (The Secret Sauce)</h2>
+<ul>
+<li><strong>Coherence</strong>: Signals align with a hypothesized state</li>
+<li><strong>Contradiction</strong>: Signals conflict → points to artifact or alternative etiology</li>
+<li><strong>Dynamic Strand Weighting</strong>: Reliability adjusted per session (lighting, motion, medication effects)</li>
+</ul>
+<p>Cheap sensors become useful not by being perfect, but by being <strong>honest about their limitations</strong>.</p>
+<h2>4. Minimal Viable Reference Implementation (OSDB-MVP)</h2>
+<p>Focus: Triage &amp; monitoring of common inflammation/infection/recovery patterns</p>
+<p><strong>Low-cost inputs</strong>:</p>
+<ul>
+<li>Temperature (oral thermometer)</li>
+<li>Resting HR &amp; HRV (wearable or manual pulse)</li>
+<li>SpO₂ (pulse oximeter)</li>
+<li>Structured symptom checklist</li>
+<li>Optional CRP (home or low-cost lab)</li>
+</ul>
+<p><strong>Outputs</strong>:</p>
+<ul>
+<li>Risk bands: Low / Watch / Urgent</li>
+<li>Uncertainty estimate + missing data suggestions</li>
+<li>Recovery trajectory tracking</li>
+</ul>
+<h2>5. Data Model: Personal Baseline First</h2>
+<p>Population ranges are blunt. OSDB treats each individual as their own control:</p>
+<ul>
+<li>Typical resting HR, HRV, temperature</li>
+<li>Personal CRP/ferritin history (if measured)</li>
+<li>Seasonal patterns, medication signatures</li>
+</ul>
+<p>Question shifts from “Are you in range?” → “What changed for <em>you</em>?”</p>
+<h2>6. Validation Plan (Open &amp; Reproducible)</h2>
+<ol start="1">
+<li><strong>Synthetic validation</strong> – simulated trajectories + sensor noise</li>
+<li><strong>Retrospective</strong> – de-identified datasets</li>
+<li><strong>Prospective</strong> – community/clinic studies with clinician oversight</li>
+</ol>
+<p>Key metrics:</p>
+<ul>
+<li>Calibration curves</li>
+<li>Decision-curve analysis</li>
+<li>Abstention performance</li>
+<li>Fairness across demographics</li>
+</ul>
+<h2>7. Anti-Enclosure Design Features</h2>
+<ul>
+<li>Open interface spec for all strand adapters</li>
+<li>Explainability by construction (visible graph + weights)</li>
+<li>Offline-first / on-device capable (privacy)</li>
+<li>Federated learning optional</li>
+<li>Full provenance logging</li>
+</ul>
+<h2>Example Narrative Output</h2>
+<pre class="code"><code>Posterior: Moderate probability viral syndrome (62%); low probability bacterial pneumonia (18%)
+Coherence evidence: Fever trend upward + mild tachycardia + cough onset timing
+Contradiction evidence: Normal SpO₂, no reported chest pain
+Uncertainty drivers: Missing inflammation marker (CRP), low-quality overnight HRV
+Next best measurement: Spot-check SpO₂ after 2-minute walk; consider CRP if symptoms worsen
+Safety note: If SpO₂ drops below 92% or breathlessness increases → seek urgent care immediately</code></pre>
+<p>This is braided diagnostics: not false certainty, but guided, inspectable clarity.</p>
+<hr>
+</article>
+
+<footer>
+ <h2>The rest of the set</h2>
+ <ul class="sibs">
+  <li><a href="https://sjgant80-hub.github.io/diagnostic-braid/"><span class="t">Diagnostic Braid</span>
+   <span class="m">Diagnostics · 8 January 2026</span></a></li>
+  <li><a href="https://sjgant80-hub.github.io/kinetic-braid-prior-art/"><span class="t">The Kinetic Braid</span>
+   <span class="m">Physics-aware AI · 7 January 2026</span></a></li>
+  <li><a href="https://sjgant80-hub.github.io/thrl-harmonic-energy-loop/"><span class="t">Toroidal Harmonic Regenerative Loop</span>
+   <span class="m">Energy · 8 January 2026</span></a></li>
+  <li><a href="https://sjgant80-hub.github.io/mycelial-cognition-architecture/"><span class="t">Mycelial Cognition Architecture</span>
+   <span class="m">Cognition · 8 January 2026</span></a></li>
+  <li><a href="https://sjgant80-hub.github.io/stigmergic-governance-mesh/"><span class="t">Planetary Stigmergic Governance Mesh</span>
+   <span class="m">Cognition · 8 January 2026</span></a></li>
+  <li><a href="https://sjgant80-hub.github.io/thrl-regenerative-schematic/"><span class="t">Closed-Loop Harmonic Energy Schematic</span>
+   <span class="m">Energy · 9 January 2026</span></a></li>
+  <li><a href="https://sjgant80-hub.github.io/mycelial-cognition-braided/"><span class="t">Mycelial Cognition, Braided</span>
+   <span class="m">Cognition · 9 January 2026</span></a></li>
+  <li><a href="https://sjgant80-hub.github.io/policy-phi-fighter/"><span class="t">Policy-Phi Fighter</span>
+   <span class="m">Consumer tool · 9 January 2026</span></a></li>
+  <li><a href="https://sjgant80-hub.github.io/clhes-harmonic-energy-system/"><span class="t">Closed-Loop Harmonic Energy System</span>
+   <span class="m">Energy · 21 January 2026</span></a></li>
+ </ul>
+ <p>Published as prior art so these ideas stay buildable by anyone. This page is generated from the
+ repository's own README — it re-presents the filing, it does not restate it.</p>
+</footer>
+</div></body></html>
